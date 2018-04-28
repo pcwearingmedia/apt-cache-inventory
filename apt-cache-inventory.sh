@@ -1,12 +1,13 @@
 #!/bin/bash
 
-	# Count all repository hits for all characters a-z and 0-9.
-	# Display hits per search (^i) and a total.
-
-
+	# Script name: APT Cache Inventory
 	#
+	# Author: P-C Markovski
+	# Date (Git repo init): 2018-04-28
+	# Purpose:
+	#	 Count all repository hits for all characters a-z and 0-9.
+	#	 Display hits per search (^i) and a total.
 	# ToDo: The speed impact of appending arrays to existing arrays. Notice the totalcache array append operation's speed impact.
-	#
 
 unset keys newit totalcache total
 
@@ -35,12 +36,19 @@ for i in ${keys[@]}; do
 	printf "Current iteration: %s and total is: %s\n" $newitlen $total
 
 		# Lithmus test: Print the last element in the array for this loop iteration. Check that initial character matches.
-	printf "Current highest hit: %s\n" ${newit[-1]}
+	#printf "Current highest hit: %s\n" ${newit[-1]}
 done
 
 
 	# ${totalcache[]} now contains all the apt cache hits.
 	# We can therefore use this array for any further calculations.
 
-
+	# Print the calculated total of package hits in the apt cache.
 echo $total
+
+	$ Print array with found packages into text file.
+printf "%s\n" ${totalcache[@]} > totalcache.txt
+
+
+
+
