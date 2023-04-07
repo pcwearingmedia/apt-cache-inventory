@@ -9,7 +9,7 @@
 	#	 Display hits per search (^i) and a total.
 	# ToDo: The speed impact of appending arrays to existing arrays. Notice the totalcache array append operation's speed impact.
 
-unset keys newit totalcache total
+unset keys newit newitlen totalcache total
 
 keys=({a..z} {0..9})
 echo ${keys[@]}
