@@ -14,7 +14,7 @@ unset keys newit totalcache total
 keys=({a..z} {0..9})
 echo ${keys[@]}
 
-IFS=$'\n'
+IFS=$'\n' # Change the internal field separation (word splitting).
 
 	# Step through the array with characters and search the apt cache.
 
