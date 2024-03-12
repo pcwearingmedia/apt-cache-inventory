@@ -34,25 +34,4 @@ The public list of APT cache mirrors : https://www.debian.org/mirror/list
 So what are people installing?
 The Debian project has statistics that show which packages are installed more frequently. We take a quick glance at the statistics to see which top 300 packages are installed. Bear in mind that this relies on statistics gathered from users that have the popularity-contest package installed.
 https://popcon.debian.org/by_vote
-Let's look at the 20 top results.
-
-1     perl-base                      199004 187532    48 11374    50 (Niko Tyni)                     
-2     debianutils                    199012 186951   421 11590    50 (Clint Adams)                   
-3     dpkg                           199015 186909   435 11624    47 (Dpkg Developers)               
-4     libc6                          198933 185848    58 13015    12 (Gnu Libc Maintainers)          
-5     dash                           196110 184004   792 11216    98 (Gerrit Pape)                   
-6     libgcc1                        198973 183748    78 15132    15 (Debian Gcc Maintainers)        
-7     sensible-utils                 195864 183037   669 12126    32 (Anibal Monsalve Salazar)       
-8     tar                            199009 182073  4496 12390    50 (Bdale Garbee)                  
-9     zlib1g                         199013 181875  3697 13415    26 (Mark Brown)                    
-10    libacl1                        199007 177107  4771 17080    49 (Anibal Monsalve Salazar)       
-11    libselinux1                    198955 176643  4387 17885    40 (Debian Selinux Maintainers)    
-12    coreutils                      199012 176305  6975 15688    44 (Michael Stone)                 
-13    lsb-base                       198994 176112  5618 17240    24 (Debian Lsb Team)               
-14    debconf                        199003 176038  4966 17980    19 (Debconf Developers)            
-15    gzip                           199004 175994 10810 12098   102 (Bdale Garbee)                  
-16    gpgv                           198965 175819 10347 12732    67 (Debian Gnupg Maintainers)      
-17    grep                           199002 175736 10992 12173   101 (Anibal Monsalve Salazar)       
-18    adduser                        198992 175678  5813 17472    29 (Debian Adduser Developers)     
-19    popularity-contest             198698 175637 10742 12220    99 (Popularity Contest Developers) 
-20    apt                            199002 175444 10689 12792    77 (Apt Development Team)          
+There you can see the top results.
