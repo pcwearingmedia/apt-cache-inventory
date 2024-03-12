@@ -24,9 +24,7 @@ If we take a quick look at the sources.list file in /etc/apt, we can see that th
 
 Push-triggered mirroring for faster updates of mirrors
 It's possible to speed up the synchronization “down the chain” of mirror archives using a push triggered mechanism. An upstream mirror will then use a SSH trigger to notify its downstream mirror to update itself. Recall the policy for downstream mirrors to update their archive four times per day. With push-triggered mirroring we can decrease the amount of time a mirror is not up-to-date.
-The push mirror uses ssh to login to the pushed mirror's account, public key authentication is used. The key is configured restrictively so that the only possible operation is to trigger a mirror run. The pushed mirror will run ftpsync to update the archive with rsync just like when a normal scheduled update is triggered.
-
-https://www.debian.org/mirror/push_mirroring
+The push mirror uses ssh to login to the pushed mirror's account, public key authentication is used. The key is configured restrictively so that the only possible operation is to trigger a mirror run. The pushed mirror will run ftpsync to update the archive with rsync just like when a normal scheduled update is triggered. (https://www.debian.org/mirror/push_mirroring)
 
 Secondary mirror faster than primary? Yes, could be..
 A secondary mirror can have restrictions on what is stored. However, this could also mean that a secondary mirror is faster than a primary mirror. Consider a secondary mirror that is located closer to you geographically and has a smaller archive size than a primary mirror. The secondary is then much faster to search. This could be an important option for a company that wants to have a secure and reliable APT archive that is a subset of the master archive. With the possibility to select the geographical location you are then also more in control of the latencies for searching and downloading from the mirror. Taken together, a partial mirror that is placed close to all your downstream clients can greatly increase download times. There is also the aspect of full release management control when you own a partial mirror.
@@ -34,7 +32,6 @@ A secondary mirror can have restrictions on what is stored. However, this could 
 The public list of APT cache mirrors : https://www.debian.org/mirror/list
 
 So what are people installing?
-https://unix.stackexchange.com/questions/437794/alternatives-to-popularity-contest-to-know-the-usage-of-package
 The Debian project has statistics that show which packages are installed more frequently. We take a quick glance at the statistics to see which top 300 packages are installed. Bear in mind that this relies on statistics gathered from users that have the popularity-contest package installed.
 https://popcon.debian.org/by_vote
 Let's look at the 20 top results.
