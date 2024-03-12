@@ -6,7 +6,7 @@ Check out the following script to try this yourself.
 . apt-cache-inventory.sh
 I search the UK APT cache on Sunday 4th May 2018. It will not be the same if we change to the NL APT cache, where the total number of packages will be 42773.
 We can quickly change to the NL cache with the following command sed command:
-sed -i s/uk/nl/g /etc/apt/sources.list
+. sed -i s/uk/nl/g /etc/apt/sources.list
 If we now run the Bash script again we can see a new total count of packages: 43193. Why the discrepancy? To understand this we need to look at the mirroring mechanism for the APT cache.
 
 How APT cache works on a grand scale
@@ -18,9 +18,6 @@ Mirroring mechanics
 To continue our exploration of apt cache mirrors, we note that a mirror is synchronized with an archive higher up in the tree hierarchy of apt mirrors. The data storage is either using a tarball or a git repository and published via HTTP.
 The topmost archive (the master) is updated four times daily, and the mirrors usually begin updating at 03:00, 09:00, 15:00, and 21:00 (UTC). It's a big archive.. When writing this article, the total size is +2700 GB, all architectures, binaries and source included.
 The takeaway here is that every mirror only has one upstream which data is synchronized from.
-https://unix.stackexchange.com/questions/437558/apt-mirrors-recommended-vs-actual-synchronization-frequency
-rsync vs ftpsync - What is the added benefit of ftpsync?
-ftpsync vs debmirror - Why use debmirror for a partial mirror?
 
 https://www.debian.org/mirror/ftpmirror
 If we take a quick look at the sources.list file in /etc/apt, we can see that the URLs are also unencrypted hypertext data.
