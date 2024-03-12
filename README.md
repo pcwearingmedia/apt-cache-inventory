@@ -1,6 +1,7 @@
 ## The Debian APT cache in numbers for a human understanding
 
-43184. That is the number we will begin with today. This is the number of packages available in the APT package cache, when searching for packages that begin with {a..z} or {0..9}.
+43184.
+That is the number we will begin with today. This is the number of packages available in the APT package cache, when searching for packages that begin with {a..z} or {0..9}.
 Check out the following script to try this yourself (available in the git repository https://github.com/pcwearingmedia/apt-cache-inventory.git)..
 . apt-cache-inventory.sh
 I search the UK APT cache on Sunday 4th May 2018. It will not be the same if we change to the NL APT cache, where the total number of packages will be 42773.
